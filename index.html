@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - Your Personal Music Streaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="music-hub">
+            <!-- Navigation Sidebar -->
+            <nav class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <i data-lucide="music"></i>
+                        <h1>MusicHub</h1>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <button class="nav-item active" data-section="home">
+                        <i data-lucide="home"></i>
+                        Home
+                    </button>
+                    <button class="nav-item" data-section="search">
+                        <i data-lucide="search"></i>
+                        Search
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+             <main class="main-content">
+                <div id="home-section" class="section active">
+                    <div class="hero-section">
+                        <h1 id="greeting">Good evening</h1>
+                        <p>Discover new music and enjoy your favorites</p>
+                    </div>
+                    <div class="music-grid">
+                        <div class="music-card">
+                            <div class="card-cover"></div>
+                            <h3>Midnight Dreams</h3>
+                            <p>Luna Echo</p>
+                            <button class="play-btn" data-track="1">
+                                <i data-lucide="play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- More music cards... -->
+                    </div>
+                </div>
+
+                <div id="search-section" class="section">
+                    <h1>Search</h1>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="What do you want to listen to?">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+
+                <div id="library-section" class="section">
+                    <h1>Your Library</h1>
+                    <div class="library-tabs">
+                        <button class="tab-btn active">Playlists</button>
+                        <button class="tab-btn">Liked Songs</button>
+                        <button class="tab-btn">Recently Played</button>
+                    </div>
+                    <div class="library-content"></div>
+                </div>
+            </main>
+
+            <!-- Music Player -->
+            <div class="music-player">
+                <div class="player-track-info">
+                    <div class="track-cover"></div>
+                    <div class="track-details">
+                        <h4 id="current-title">Select a song</h4>
+                        <p id="current-artist">to start playing</p>
+                    </div>
+                </div>
+                
+                <div class="player-controls">
+                    <div class="control-buttons">
+                        <button id="shuffle-btn"><i data-lucide="shuffle"></i></button>
+                        <button id="prev-btn"><i data-lucide="skip-back"></i></button>
+                        <button id="play-pause-btn" class="play-btn-main">
+                            <i data-lucide="play"></i>
+                        </button>
+                        <button id="next-btn"><i data-lucide="skip-forward"></i></button>
+                        <button id="repeat-btn"><i data-lucide="repeat"></i></button>
+                    </div>
+                    <div class="progress-container">
+                        <span id="current-time">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span id="total-time">0:00</span>
+                    </div>
+                </div>
+
+                <div class="volume-controls">
+                    <button id="volume-btn"><i data-lucide="volume-2"></i></button>
+                    <div class="volume-slider">
+                        <input type="range" id="volume-range" min="0" max="100" value="75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
